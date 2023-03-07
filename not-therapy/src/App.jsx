@@ -2,9 +2,28 @@ import { useState } from 'react'
 import ChatBox from './components/Main/Chat/ChatBox'
 import ChatHistory from './components/Main/Chat/ChatHistory'
 import './App.css'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
-  
+
+  const styles = {
+    header: {
+      minHeight: '6vh'
+    },
+    footer: {
+      minHeight: '6vh'
+    },
+    main: {
+      minHeight: '88vh'
+    },
+    mainContainer: {
+      minHeight: 'inherit'
+    },
+    mainRow: {
+      minHeight: 'inherit'
+    }
+  }
   const example = [
     {
       isUser: true,
@@ -22,16 +41,24 @@ function App() {
       content: 'test3',
     },
   ]
-  let [history, setHistory] = useState(example)
+  let [history, setHistory] = useState([])
 
   return (
     <div className="App">
-      <div className='row'>
-        <div className='col'>
-          <ChatHistory history={history} />
-          <ChatBox history={history} setHistory={setHistory} />
+      <header style={styles.header}>
+        <Header />
+      </header>
+      <main style={styles.main}>
+        <div className='container' style={styles.mainContainer}>
+          <div className='row' style={styles.mainRow}>
+            <ChatHistory history={history} />
+            <ChatBox history={history} setHistory={setHistory} />
+          </div>
         </div>
-      </div>
+      </main>
+      <footer style={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   )
 }

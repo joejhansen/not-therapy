@@ -22,18 +22,17 @@ function ChatBox({ history, setHistory }) {
         return null
     }
     return (
-        <div className='row'>
-            <div className='col'>
-                <form action="submit" onSubmit={handleSubmit}>
-                    <input
-                        name="content"
-                        placeholder="What's on your mind?"
-                        rows={1}
-                        cols={50}
-                        onChange={e => setNewEntry(e.target.value)}
-                    />
-                </form>
-            </div>
+        <div className='col-12 d-flex justify-content-center'>
+            <form action="submit" onSubmit={handleSubmit}>
+                <input
+                    name="content"
+                    placeholder="What's on your mind?"
+                    rows={1}
+                    cols={50}
+                    autoComplete="off"
+                    onChange={e => setNewEntry(e.target.value)}
+                />
+            </form>
         </div>
     )
 }
