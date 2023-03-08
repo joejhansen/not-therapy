@@ -4,7 +4,7 @@ function Footer({ style }) {
             <div className="row">
                 <div className="col">
                     <div style={style}>
-                        footer
+                        <p>fuck off</p>
                     </div>
                 </div>
             </div>

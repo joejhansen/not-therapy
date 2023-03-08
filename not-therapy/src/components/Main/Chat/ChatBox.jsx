@@ -28,7 +28,7 @@ function ChatBox({ history, setHistory }) {
                     name="content"
                     placeholder="What's on your mind?"
                     rows={1}
-                    cols={50}
+                    cols={60}
                     autoComplete="off"
                     onChange={e => setNewEntry(e.target.value)}
                 />

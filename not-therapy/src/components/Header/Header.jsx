@@ -1,10 +1,11 @@
+
 function Header({ style }) {
     return (
         <div className="container">
             <div className="row">
                 <div className="col">
                     <div style={style}>
-                        header
+                        <p>not therapy</p>
                     </div>
                 </div>
             </div>

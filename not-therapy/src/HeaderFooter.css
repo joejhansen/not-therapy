@@ -1,0 +1,14 @@
+header span{
+    visibility: hidden;
+}
+
+header:hover span{
+    visibility: visible;
+}
+
+footer span{
+    visibility: hidden;
+}
+footer:hover span{
+    visibility: visible;
+}

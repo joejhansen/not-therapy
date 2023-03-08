@@ -2,20 +2,27 @@ import { useState } from 'react'
 import ChatBox from './components/Main/Chat/ChatBox'
 import ChatHistory from './components/Main/Chat/ChatHistory'
 import './App.css'
+import './HeaderFooter.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 function App() {
-
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
   const styles = {
+    headerOuter: {
+      minHeight: `${6*vh}px`
+    },
     header: {
-      minHeight: '6vh'
+    },
+    footerOuter: {
+      minHeight: `${6*vh}px`
     },
     footer: {
-      minHeight: '6vh'
     },
     main: {
-      minHeight: '88vh'
+      minHeight: `${88*vh}px`
     },
     mainContainer: {
       minHeight: 'inherit'
@@ -45,8 +52,10 @@ function App() {
 
   return (
     <div className="App">
-      <header style={styles.header}>
-        <Header />
+      <header style={styles.headerOuter}>
+        <span>
+          <Header style={styles.header} />
+        </span>
       </header>
       <main style={styles.main}>
         <div className='container' style={styles.mainContainer}>
@@ -56,8 +65,11 @@ function App() {
           </div>
         </div>
       </main>
-      <footer style={styles.footer}>
-        <Footer />
+      <footer style={styles.footerOuter}>
+        <span>
+          <Footer style={styles.footer} />
+
+        </span>
       </footer>
     </div>
   )
