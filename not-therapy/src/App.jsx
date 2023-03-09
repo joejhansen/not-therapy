@@ -7,22 +7,24 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 function App() {
+  const apiKey = import.meta.env.VITE_OPEN_AI_KEY
+  console.log(apiKey)
   let vh = window.innerHeight * 0.01;
   // Then we set the value in the --vh custom property to the root of the document
   document.documentElement.style.setProperty('--vh', `${vh}px`);
   const styles = {
     headerOuter: {
-      minHeight: `${6*vh}px`
+      minHeight: `${6 * vh}px`
     },
     header: {
     },
     footerOuter: {
-      minHeight: `${6*vh}px`
+      minHeight: `${6 * vh}px`
     },
     footer: {
     },
     main: {
-      minHeight: `${88*vh}px`
+      minHeight: `${88 * vh}px`
     },
     mainContainer: {
       minHeight: 'inherit'
