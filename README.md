@@ -16,10 +16,13 @@ Are you unable to see a therapist? Do you not have the time, resources, or plain
 not-therapy is a single-page application built with Vite React utilizing OpenAI's ChatGPT.
 
 ## **When?**
-Right now
+Right now.
 
 ## **Where?**
-Right here
+Right here.
+
+## **This is just a front-end for ChatGPT**
+Yes. I wanted to try Vite while following through on a joke and this does both of those things. Also, what else am I going to do with my free tokens? Make another bland video essay monologue?
 
 ## **Disclaimer**
 not-therapy is not a suitable replacement for therapy of any kind. I am not a licensed therapist or qualified medical professional. 
